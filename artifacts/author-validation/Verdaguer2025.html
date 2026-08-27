@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Collection Form</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f5f7fb; color: #222; margin: 0; padding: 0; line-height: 1.6; }
+.container { max-width: 1100px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); width: min(1100px, 95%); padding: clamp(16px, 3vw, 40px); }
+h1, h2, h3, h4 { color: #1d3557; }
+h1 { border-bottom: 3px solid #457b9d; padding-bottom: 10px; }
+.section { margin-top: 40px; }
+.question-card { background: #fafbfd; border: 1px solid #dde5ef; border-radius: 12px; padding: 24px; margin-top: 25px; }
+.definition-box { background: #eef4ff; border-left: 5px solid #457b9d; padding: 18px; border-radius: 8px; margin-top: 15px; }
+.tag { display: inline-block; background: #dbeafe; color: #1e3a8a; padding: 6px 10px; border-radius: 18px; margin: 4px; font-size: 13px; }
+table { width: 100%; border-collapse: collapse; margin-top: 15px; display: block; overflow-x: auto; }
+th, td { border: 1px solid #d8dee9; padding: 12px; text-align: left; vertical-align: top; }
+th { background: #457b9d; color: white; }
+.checkbox-group { margin: 12px 0 20px 0; display: flex; gap: 20px; }
+.checkbox-label { display: flex; align-items: center; gap: 8px; font-size: 15px; cursor: pointer; }
+.checkbox-label input[type="radio"] { width: 18px; height: 18px; cursor: pointer; }
+
+input[type="email"], textarea { width: 100%; margin-top: 8px; margin-bottom: 20px; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px; font-size: 14px; box-sizing: border-box; max-width: 100%; }
+textarea { min-height: 100px; resize: vertical; }
+
+.required-dot { color: #e63946; font-weight: bold; }
+.footer-note { margin-top: 40px; background: #fff8e6; border-left: 5px solid #e9b949; padding: 18px; border-radius: 8px; }
+* { box-sizing: border-box; }
+input, button { width: 100%; max-width: 100%; }
+
+.btn-submit { background:#457b9d; color:white; border:none; padding:15px 35px; border-radius:8px; font-size:18px; cursor:pointer; display:inline-block; transition: background 0.2s; }
+.btn-submit:hover { background:#1d3557; }
+.btn-submit:disabled { background:#cbd5e1; color:#94a3b8; cursor:not-allowed; }
+
+.modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 9999; justify-content: center; align-items: center; backdrop-filter: blur(4px); }
+.modal-content { background: white; padding: 40px; border-radius: 12px; max-width: 500px; width: 90%; text-align: center; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); transform: scale(0.9); animation: modalPop 0.3s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+@keyframes modalPop { to { transform: scale(1); } }
+.modal-icon { font-size: 48px; color: #4ade80; margin-bottom: 15px; }
+
+@media (max-width: 768px) { body { font-size: 15px; } h1 { font-size: 1.8rem; } h2 { font-size: 1.4rem; } h3 { font-size: 1.2rem; } .checkbox-group { flex-direction: column; gap: 10px; } .question-card, .definition-box { padding: 16px; } .tag { display:block; margin:8px 0; } }
+</style>
+</head>
+<body>
+
+<div id="thankYouModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-icon">✓</div>
+        <h2>Thank You!</h2>
+        <p>Your survey answers have been submitted successfully.</p>
+        <p style="color:#64748b; font-size:14px; margin-top:10px;">You may now close this page.</p>
+        <button onclick="document.getElementById('thankYouModal').style.display='none'" 
+        style="margin-top:20px; padding:10px 24px; background:#457b9d; color:white; border:none; border-radius:8px; cursor:pointer;">
+         Close
+        </button>
+    </div>
+</div>
+
+<div class="container">
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="onFormSubmissionComplete();"></iframe>
+
+<form id="surveyForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdGWv4Epfyn-bdHkNgSql1P5HdtzuOmvFau7VzFrMigICySRw/formResponse" method="POST" target="hidden_iframe" onsubmit="return handleFormSubmission()">
+
+<input type="hidden" name="entry.1754522189" value="Verdaguer2025">
+
+<h1>Data Collection Form</h1>
+<p>We are analyzing the paper <strong>"Boosting Behavior Tree Generation for Robots with Large Language Models and Genetic Programming"</strong> and we are surveying authors to check if the data we have extracted fits our taxonomy of adaptation needs in robotic systems.</p>
+<p> We would appreciate your feedback.</p>
+    
+<h2>Ethical aspects</h2>
+  <p>No personal, sensitive, or potentially harmful information is collected. Participation is voluntary, and no risks or direct benefits are expected. Your responses are anonymous and will be used solely for academic research purposes.</p>
+
+  <hr>
+
+  <h2>Consent</h2>
+  <p>Your participation is voluntary and based on informed consent. You may withdraw at any time by closing the survey before submission. Upon request, all data associated with you will be deleted and excluded from any analysis or publication.</p>
+
+  <hr>
+
+  <h2>Contact Information</h2>
+  <p>If you have any questions or concerns about the study, please contact us at:</p>
+  <ul>
+    <li><strong>Mehran Rostamnia (Main Contact):</strong> <a href="mailto:mehran.rostamnia@gssi.it">mehran.rostamnia@gssi.it</a></li>
+    <li><strong>Ricardo Caldos:</strong> <a href="mailto:ricardo.caldas@gssi.it">ricardo.caldas@gssi.it</a></li>
+    <li><strong>Gianluca Filippone:</strong> <a href="mailto:gianluca.filippone@gssi.it">gianluca.filippone@gssi.it</a></li>
+    <li><strong>Patrizio Pelliccione:</strong> <a href="mailto:patrizio.pelliccione@gssi.it">patrizio.pelliccione@gssi.it</a></li>
+  </ul>
+<div class="section">
+    <h1> </h1>
+    
+<h2>Questions</h2>
+
+
+
+<div class="section" style="margin-top: 30px;">
+    <h2>Definition: Adaptation Need</h2>
+    <div class="definition-box">
+    <p><strong>Adaptation need</strong> is a situation in which a robotic system may need to update, repair, specialize, replace, or otherwise change its behavior in order to maintain or improve mission success, safety, reliability, robustness, or efficiency.</p>
+    </div>
+</div>
+
+<div class="question-card">
+<h3>Adaptation Needs Addressed in the Paper</h3>
+<p>From our analysis, we found out that your paper tackled the following adaptation needs using Behavior Trees.</p>
+<p>We provided the definition(s) of the identified adaptation need(s) in the box below.</p>
+
+<div class="definition-box" style="margin-bottom:12px;">
+<p><strong>Identified Adaptation Need:</strong> Human agents coexistence</p>
+<p><strong>Definition:</strong> Human agents coexistence refers to the presence of humans whose behavior, intentions, preferences, or interactions may be unpredictable, difficult to model, and/or capable of changing the environment, task conditions, or mission requirements in ways that affect the robot’s mission.</p>
+</div>
+
+<p><strong>Did we identify such adaptation needs correctly? <span class="required-dot">*</span></strong></p>
+<div class="checkbox-group" id="q2_identified_group">
+    <label class="checkbox-label"><input type="radio" name="entry.202387473" value="Yes"> Yes</label>
+    <label class="checkbox-label"><input type="radio" name="entry.202387473" value="No"> No</label>
+    <label class="checkbox-label"><input type="radio" name="entry.202387473" value="Partially"> Partially</label>
+</div>
+<p><strong>If you answered No, or Partially, explain your answer</strong> <small style="color: #666;">(Optional)</small></p>
+<textarea name="entry.1769084171"></textarea>
+
+<p><strong>Does your work target additional adaptation needs? <span class="required-dot">*</span></strong></p>
+<div class="checkbox-group" id="q2_target_group">
+    <label class="checkbox-label"><input type="radio" name="entry.1526969184" value="Yes"> Yes</label>
+    <label class="checkbox-label"><input type="radio" name="entry.1526969184" value="No"> No</label>
+    <label class="checkbox-label"><input type="radio" name="entry.1526969184" value="Partially"> Partially</label>
+</div>
+
+<p><strong>Would you classify the problem differently or have further feedback?</strong> <small style="color: #666;">(Optional)</small></p>
+<p>You can find the definitions of the further adaptation needs at <a href="https://mehranrostamnia.github.io/adaptation_needs_behavior_trees/validation/author_questionnaires/definitions.html" target="_blank">this page</a>.</p>
+<textarea name="entry.1183333637"></textarea>
+</div>
+
+<div class="question-card">
+<h3>Classification of your approach in the paper</h3>
+<p>We classified approaches used to enhance BTs for adaptation to understand to what extent these approaches and techniques overcome the limitations of classic BTs. We organize the analyzed studies into four primary families of BT enhancement: BT evolution, BT extension, BT generation, and BT refinement. You can find the definitions below.</p>
+
+<div class="definition-box">
+<h4>Definitions: Approaches and Techniques to Enhance BTs for Adaptation</h4>
+<table>
+<thead><tr><th>Approach</th><th>Definition</th></tr></thead>
+<tbody>
+<tr><td><strong>BT Generation</strong></td><td>BT generation refers to automated or semi-automated processes that produce a BT from a higher-level specification, such as human intent, task models, natural-language instructions, demonstrations, plans, or other informal descriptions. In BT generation, no initial BT is taken as the behavior to be modified, although existing BTs, BT fragments, templates, libraries, or design patterns may be used as prior knowledge to guide the generation process.</td></tr>
+<tr><td><strong>BT Extension</strong></td><td>BT extension refers to processes that modify the BT formalism itself. This may involve introducing new syntactic constructs into the BT grammar, changing the semantics of existing constructs, or both. Unlike generation, evolution, or refinement, BT extension changes what can be expressed within the BT language or how BT nodes are interpreted.</td></tr>
+<tr><td><strong>BT Evolution</strong></td><td>BT evolution refers to processes that start from an initial, often minimal or partial, BT and progressively modify its structure in order to obtain a tree that encodes more complex or improved behavior. These modifications may include adding, replacing, deleting, or reorganizing nodes. Evolution is commonly associated with search-based or optimization-based techniques, such as genetic programming or grammatical evolution, where candidate BTs are iteratively improved according to a fitness criterion.</td></tr>
+<tr><td><strong>BT Refinement</strong></td><td>BT refinement refers to processes that take an existing BT as input and update it to improve, correct, or adapt its behavior without changing the underlying BT formalism. Refinement may modify specific nodes, subtrees, parameters, or execution conditions. The resulting BT may preserve the original behavior while improving its execution or complexity, or it may intentionally update the behavior to better satisfy task, system, or environmental requirements.</td></tr>
+</tbody>
+</table>
+</div>
+<p>From our analysis, we classified your paper as a <strong>BT Generation & BT Refinement</strong> approach.</p>
+<p><strong>Do you agree on the classification of the approach presented in your paper, according to the definitions above? <span class="required-dot">*</span></strong></p>
+<div class="checkbox-group" id="q3_agree_group">
+    <label class="checkbox-label"><input type="radio" name="entry.1120736582" value="Yes"> Yes</label>
+    <label class="checkbox-label"><input type="radio" name="entry.1120736582" value="No"> No</label>
+    <label class="checkbox-label"><input type="radio" name="entry.1120736582" value="Partially"> Partially</label>
+</div>
+<p><strong>If not, how would you classify your approach and why?</strong> <small style="color: #666;">(Optional)</small></p>
+<textarea name="entry.415972367"></textarea>
+</div>
+</div>
+
+<div class="footer-note">
+<strong>Thank you for your time and feedback.</strong>
+</div>
+
+<div class="question-card" style="margin-top:30px; border-left: 5px solid #1d3557;">
+    <p><strong>May we contact you for follow-up about your answers? <span class="required-dot">*</span></strong></p>
+    <div class="checkbox-group" id="followup_contact_group">
+        <label class="checkbox-label">
+            <input type="radio" name="entry.1664008704" value="Yes, you may contact me about my questionnaire responses."> Yes, you may contact me about my questionnaire responses.
+        </label>
+        <label class="checkbox-label">
+            <input type="radio" name="entry.1664008704" value="No, please do not contact me."> No, please do not contact me.
+        </label>
+    </div>
+</div>
+
+<div class="question-card" style="margin-top:30px;">
+    <h3>Email Address</h3>
+    <p>Please enter your email if you wish to be contacted.</p>
+    <input type="email" name="entry.81702464" placeholder=" ">
+</div>
+
+<div style="text-align:center;margin-top:40px;">
+<button type="submit" id="submitBtn" class="btn-submit">Submit Survey</button>
+</div>
+</form>
+</div>
+
+<script type="text/javascript">
+    var formSubmittedState = false;
+
+    function handleFormSubmission() {
+        var radioGroups = [
+            
+            { id: "q2_identified_group", name: "entry.202387473", alert: "Please answer: Is this adaptation need correctly identified?" },
+            { id: "q2_target_group", name: "entry.1526969184", alert: "Please answer: Does your work target additional adaptation needs?" },
+            { id: "q3_agree_group", name: "entry.1120736582", alert: "Please answer: Do you agree on the classification of the approach?" },
+            { id: "followup_contact_group", name: "entry.1664008704", alert: "Please answer: May we contact you for follow-up about your answers?" }
+        ];
+
+        for (var i = 0; i < radioGroups.length; i++) {
+            var checked = document.querySelector('input[name="' + radioGroups[i].name + '"]:checked');
+            if (!checked) {
+                alert(radioGroups[i].alert);
+                document.getElementById(radioGroups[i].id).scrollIntoView({ behavior: 'smooth' });
+                return false;
+            }
+        }
+
+        formSubmittedState = true;
+
+        var btn = document.getElementById("submitBtn");
+        if (btn) {
+            btn.disabled = true;
+            btn.innerText = "Submitting...";
+        }
+
+        setTimeout(function() {
+            btn.innerText = "Submitted ✓";
+            document.getElementById("thankYouModal").style.display = "flex";
+            document.getElementById("surveyForm").reset();
+        }, 1000);
+        return true; 
+    }
+
+    function onFormSubmissionComplete() {
+        if (!formSubmittedState) return; 
+
+        var btn = document.getElementById("submitBtn");
+        var form = document.getElementById("surveyForm");
+
+        setTimeout(function() {
+            if (btn) {
+                btn.innerText = "Submitted";
+            }
+            var modal = document.getElementById("thankYouModal");
+            if (modal) {
+                modal.style.display = "flex";
+            }
+            form.reset();
+        }, 1500);
+    }
+</script>
+</body>
+</html>
+

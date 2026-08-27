@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research design and replication steps for the Adaptation Needs and Behavior Trees study.">
+  <title>Methodology — Adaptation Needs &amp; Behavior Trees</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body data-page="methodology">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="Replication package home"><span class="brand-mark" aria-hidden="true"></span><span>Adaptation × BTs</span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+        <a href="index.html" data-page="home">Overview</a>
+        <a href="methodology.html" data-page="methodology">Methodology</a>
+        <a href="artifacts.html" data-page="artifacts">Artifacts</a>
+        <a href="studies.html" data-page="studies">31 studies</a>
+        <a href="validation.html" data-page="validation">Validation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page" id="main">
+    <section class="page-hero">
+      <p class="eyebrow">Research design</p>
+      <h1>How the study was constructed and validated</h1>
+      <p class="lede">The methodology is cumulative: each cycle contributes a classification or mapping, checks it, and passes the result to the next cycle.</p>
+      <div class="kicker-row">
+        <span class="chip">Literature-driven</span>
+        <span class="chip">Three iterative cycles</span>
+        <span class="chip">Internal + expert validation</span>
+        <span class="chip">Ordinal questionnaire data</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div><p class="eyebrow">Cycle 1</p><h2>Identify adaptation needs</h2></div>
+        <p>Uncertainty is treated as a central driver of adaptation, then interpreted through the elements that influence robotic behavior.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Starting literature</h3>
+          <p>The study begins with established uncertainty taxonomies and descriptions from self-adaptive systems, robotics-oriented uncertainty work, and the Multi-Annual Roadmap for Robotics.</p>
+          <ul class="plain-list">
+            <li>Uncertainty dimensions and taxonomies</li>
+            <li>Self-adaptive systems classifications</li>
+            <li>Robotics uncertainty and modeling</li>
+            <li>Multi-Annual Roadmap for Robotics</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Targeted grounding</h3>
+          <p>Candidate needs were checked through focused searches in Google Scholar, Scopus, and the ACM Digital Library. Queries combined robotics, adaptation, and uncertainty terms with terms specific to each candidate category.</p>
+          <p style="margin-top:16px"><a href="artifacts/search/rq1-search-strings.docx">Download the RQ1 search strings</a></p>
+        </article>
+      </div>
+      <div class="note" style="margin-top:18px">
+        <h3>Cycle 1 inclusion rule</h3>
+        <p>A study was included if it discussed an adaptation need or strategy in robotics, or if it discussed adaptation in autonomous or self-adaptive systems while providing robotics examples or applications.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div><p class="eyebrow">Cycle 2</p><h2>Analyze classical BT features and limits</h2></div>
+        <p>A focused review identifies studies that use, adapt, evolve, refine, or extend Behavior Trees in robotic systems.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Search source and scope</h3>
+          <p>The search was run through SciVal and restricted to the robotics domain. Candidate studies were screened for adaptation mechanisms involving BTs in robotic systems.</p>
+          <div class="code-block">("behavior tree" OR "behaviour tree")
+AND (adapt* OR evol*)
+AND robot*</div>
+        </article>
+        <article class="card">
+          <h3>Three extraction views</h3>
+          <ol class="plain-list">
+            <li>Classical BT features supporting robotic control</li>
+            <li>Limitations of classical BTs for adaptation needs</li>
+            <li>Mappings from Cycle 1 needs to the selected studies</li>
+          </ol>
+          <p style="margin-top:16px">The final corpus contains 31 primary studies.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div><p class="eyebrow">Cycle 3</p><h2>Characterize BT enhancement approaches</h2></div>
+        <p>The same corpus is revisited to understand how the proposed mechanisms attempt to overcome the limits identified in Cycle 2.</p>
+      </div>
+      <dl class="definition-list">
+        <dt>Type of change</dt><dd>Generation, extension, evolution, refinement, or a combination of these classes.</dd>
+        <dt>Adaptation need</dt><dd>The knowledge, perception, actuation, system, mission, or environment need addressed by the study.</dd>
+        <dt>Trigger</dt><dd>The condition or event initiating adaptation, together with reactive/proactive and design/runtime characteristics.</dd>
+        <dt>Goal</dt><dd>The behavior, performance, mission, safety, quality, or resource objective motivating the change.</dd>
+        <dt>Adapted subject</dt><dd>The BT, its nodes or subtrees, parameters, grammar, external model, controller, or other system element changed.</dd>
+        <dt>Human involvement</dt><dd>Whether the mechanism is manual, partially automated, or automated.</dd>
+      </dl>
+      <p style="margin-top:20px"><a href="artifacts/data/synthesis.xlsx">Download the technical synthesis workbook</a></p>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div><p class="eyebrow">Validation</p><h2>Three complementary expert checks</h2></div>
+        <p>The final artifact is examined from the perspective of study authors and robotics/BT researchers and practitioners.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <span class="rq-number">13</span>
+          <h3>Author validations</h3>
+          <p>Authors of 13 out of 31 primary studies responded to customized checks of the assigned limitations, adaptation needs, and technique classes.</p>
+        </article>
+        <article class="card">
+          <span class="rq-number">46</span>
+          <h3>Questionnaire responses</h3>
+          <p>Researchers and practitioners rated need relevance, the sufficiency of classical BTs, and the suitability of four enhancement classes.</p>
+        </article>
+        <article class="card">
+          <span class="rq-number">6</span>
+          <h3>Expert interviews</h3>
+          <p>Semi-structured follow-ups were used to clarify critical responses and explain domain-dependent judgments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="replication-steps">
+      <div class="section-heading">
+        <div><p class="eyebrow">Replication path</p><h2>Recreate the study in seven stages</h2></div>
+        <p>The deposited artifacts support a traceable path from literature grounding and study selection to technical synthesis and expert validation.</p>
+      </div>
+      <div class="steps">
+        <article class="step-card"><span class="step-index">1</span><div><h3>Rebuild the candidate need set</h3><p>Use the RQ1 queries and starting literature to extract uncertainty and adaptation concepts, then interpret them for robotics.</p></div></article>
+        <article class="step-card"><span class="step-index">2</span><div><h3>Reapply Cycle 1 criteria</h3><p>Check definitions, robotics evidence, examples, and category boundaries using the RQ1 worksheet.</p></div></article>
+        <article class="step-card"><span class="step-index">3</span><div><h3>Rerun the BT search</h3><p>Execute the SciVal query in the robotics domain and screen studies for BT-related robotic adaptation mechanisms.</p></div></article>
+        <article class="step-card"><span class="step-index">4</span><div><h3>Extract classical BT evidence</h3><p>Use the RQ2 worksheets to reproduce features, limitations, source excerpts, and need-to-study mappings.</p></div></article>
+        <article class="step-card"><span class="step-index">5</span><div><h3>Reproduce technical synthesis</h3><p>Classify the 31 studies by approach, technique, system, trigger, goal, adapted subject, and human involvement.</p></div></article>
+        <article class="step-card"><span class="step-index">6</span><div><h3>Reanalyze questionnaire data</h3><p>Use the released response dataset, retain Likert responses as ordinal data, and treat “Insufficient expertise” as missing rather than numeric.</p></div></article>
+        <article class="step-card"><span class="step-index">7</span><div><h3>Triangulate the evidence</h3><p>Compare literature mappings with author validation, response distributions, open answers, and the six follow-up interviews.</p></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div><strong>Adaptation Needs in Robotic Systems: Behavior Trees and Beyond</strong><p>Replication package · GSSI · <span data-current-year>2026</span></p></div>
+      <div class="footer-links"><a href="artifacts.html">Artifacts</a><a href="studies.html">Selected studies</a><a href="README.md">README</a></div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definitions Reference</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fb;
+            color: #222;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            width: min(1100px, 95%);
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #1d3557;
+            border-bottom: 3px solid #457b9d;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #1d3557;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p.intro {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            background: #fff;
+        }
+        th, td {
+            padding: 14px 18px;
+            border: 1px solid #dde5ef;
+            vertical-align: top;
+        }
+        th {
+            background-color: #457b9d;
+            color: white;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        tr:nth-child(even) {
+            background-color: #fafbfd;
+        }
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+        .category-cell {
+            font-weight: bold;
+            color: #1d3557;
+            background-color: #edf2f7 !important;
+            width: 15%;
+        }
+        .term-cell {
+            font-weight: 600;
+            color: #2c3e50;
+            width: 25%;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+            th, td {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Definitions Reference Page</h1>
+    <p class="intro">This reference page compiles categorized definitions for robotic adaptation needs.</p>
+
+    <h2>Definitions: Adaptation Needs</h2>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Subtype</th>
+                    <th>Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="category-cell" rowspan="4">Knowledge</td>
+                    <td class="term-cell"> Abstraction</td>
+                    <td>Knowledge abstraction is the omission or oversimplification of real-world details of the robotic system itself, the operational environment, and the robot-environment interaction. Knowledge abstraction is one of the reasons for the reality gap</td>
+                </tr>
+                <tr>
+                    <td class="term-cell"> Incompleteness</td>
+                    <td>Knowledge incompleteness refers to the limitation in current knowledge about the robotic system itself, its operational environment, or the actions/tasks to be performed. Knowledge incompleteness is one of the reasons for the reality gap</td>
+                </tr>
+                <tr>
+                    <td class="term-cell"> Inaccuracy</td>
+                    <td>Knowledge inaccuracy refers to a difference between the knowledge maintained by the robot and the actual state of the robotic system or the physical world in which it operates. Such discrepancies stem from an inaccurate implementation of knowledge. Knowledge inaccuracy is one of the reasons for the reality gap</td>
+                </tr>
+                <tr>
+                    <td class="term-cell"> Driftness</td>
+                    <td>Knowledge driftness refers to the discrepancy between the knowledge maintained by the robot and the actual state of the robotic system or the physical world in which it operates. uch discrepancies stem from inevitable knowledge approximations and omissions. Knowledge driftness is one of the reasons for the reality gap</td>
+                </tr>
+
+                <tr>
+                    <td class="category-cell" rowspan="3">Perception</td>
+                    <td class="term-cell">Perception Multiplicity</td>
+                    <td>Perception multiplicity refers to heterogeneity and inconsistency of information coming from multiple sources of information (e.g., cameras, sensors, LiDAR), which may represent the same real-world entities or events in different ways or provide conflicting observations.</td>
+                </tr>
+                <tr>
+                    <td class="term-cell"> Inaccuracy</td>
+                    <td>Perception inaccuracy refers to the discovery of incomplete, noisy, or unreliable observations of the environment, which stems from the inherent imperfection of sensors. This inaccuracy can stem either from internal stimuli (system itself) or external stimuli (system detects a problem that does not exist, or fails to detect a problem that actually occurs).</td>
+                </tr>
+                <tr>
+                    <td class="term-cell"> Unavailability</td>
+                    <td>Perception unavailability refers to the unavailability of perception sources, such as cameras, sensors, LiDAR, to maintain situational awareness and operational performance.</td>
+                </tr>
+                <tr>
+					<td class="category-cell" rowspan="2">Actuation</td>
+                    <td class="term-cell">Non-determinism</td>
+                    <td>Non-determinism in actuation refers to non-deterministic behavior of the actuators, where commanded actions do not always produce predictable outcomes. Mechanical imperfection and physical effects can introduce variability in how actions translate into real-world effects, which may change the world in unpredictable ways.</td>
+                </tr>
+                <tr>
+                    <td class="term-cell"> Unavailability</td>
+                    <td>Actuation unavailability refers to the unavailability or failure of actuators, which prevents the robot from executing commanded actions as intended and may compromise its ability to perform tasks.</td>
+                </tr>
+
+                <tr>
+                    <td class="category-cell" rowspan="4">System</td>
+                    <td class="term-cell">Component Failure</td>
+                    <td>Component failure refers to a condition in which one or more components of the robotic system no longer function as expected. Failures may be identified through sensors, external components, stakeholder input, supporting tools, supervision, or observed abnormal system behavior.</td>
+                </tr>
+                <tr>
+                    <td class="term-cell">Changing Resources</td>
+                    <td>Changing resources in the system refers to changing, degrading, failing, or fluctuating available resources in the robotic system, such as power constraints, sensors, actuators, software, or hardware.</td>
+                </tr>
+                <tr>
+                    <td class="term-cell">New Resources</td>
+                    <td>New resources in the system refer to the availability of new resources in the robotic system, such as power constraints, sensors, actuators, software, and hardware.</td>
+                </tr>
+                <tr>
+                    <td class="term-cell">Communication Impairment</td>
+                    <td>Communication impairment in the system refers to communication issues, such as latency, packet loss, bandwidth limitations, interference, intermittent connectivity, synchronization errors, middleware failures, and cybersecurity threats, which constrain/degrade coordination/perception sharing in multi-robot systems or shared robotic systems with different stakeholders, and the system’s ability to operate properly.</td>
+                </tr>
+
+                <tr>
+                    <td class="category-cell" rowspan="5">Mission</td>
+                    <td class="term-cell">Uncertain Specification</td>
+                    <td>Uncertain mission specification refers to the lack of deterministic and precise specifications of mission objectives and the quality of performance. This lack of specification may arise from abstraction, incompleteness, and inaccuracies in the formulation of mission goals and qualitative criteria. Moreover, relationships may span across single missions/tasks and multiple missions/tasks, including those with the same hierarchical level with different priorities, as well as between global and local objectives.</td>
+                </tr>
+                <tr>
+                    <td class="term-cell">Future Mission Changes</td>
+                    <td>Future mission changes refer to potential changes (addition, removal, or update) of defined mission/subtasks (submissions) of a mission at design time, during the robotic system’s operation, which may have a domino effect throughout the degradation of performance or cause failure. In this case, mission objectives can change slightly.</td>
+                </tr>
+                <tr>
+                    <td class="term-cell">Outdated Mission</td>
+                    <td>Outdated mission refers to the lack of availability of design-time specified mission objectives or quality of performance during the operation of robotic systems.</td>
+                </tr>
+                <tr>
+                    <td class="term-cell">Uncertain Quality Goals</td>
+                    <td>Uncertain quality goals refer to failure, changes, conflicts, and adding non-functional goals in robotic missions. These goals, such as safety, reliability, robustness, efficiency, security, and real-time performance, are sensitive to environmental dynamics, mission interdependencies, and shared resource consumption.</td>
+                </tr>
+                <tr>
+                    <td class="term-cell">Uncertain Relationships</td>
+                    <td>Uncertain relationships refer to conflicting, implicit, unknown, or unclear mission relationships at a given time, which are hard to capture in a deterministic way. Missions can share the same physical environment where robots operate. Execution of a mission can cause inconsistencies and make other missions unreachable/unaccomplishable, and have an impact on qualitative aspects. Additionally, missions potentially are executed in parallel or sequentially, which can share, consume, and occupy the same environmental and robotic resources. So, the execution of a mission can affect the other one.</td>
+                </tr>
+
+                <tr>
+                    <td class="category-cell" rowspan="3">Environment</td>
+                    <td class="term-cell">Execution Context Changes</td>
+                    <td>Execution context changes refer to unprecedented and drastic system structural changes and changes in the part of the external world (including both physical or virtual entities) with which the robotic system interacts, and the effects of the robotic system can be observed and evaluated. The context changes may arise either in the shape of static (e.g., a healthcare robot suddenly transferred to Mars) or dynamic (e.g., a rover faces a new type of terrain on Mars). Due to ongoing changes beyond the control of the developer and robotic system, the context could not be known during system design.</td>
+                </tr>
+                <tr>
+                    <td class="term-cell">Non-human Agents Coexistence</td>
+                    <td>Non-human agents coexistence refers to the presence of other non-human entities, such as robots, autonomous systems, or animals, whose behavior may be unpredictable, difficult to model, and/or capable of changing the environment in ways that affect the robot’s mission.</td>
+                </tr>
+                <tr>
+                    <td class="term-cell">Human Agents Coexistence</td>
+                    <td>Human agents coexistence refers to the presence of humans whose behavior, intentions, preferences, or interactions may be unpredictable, difficult to model, and/or capable of changing the environment, task conditions, or mission requirements in ways that affect the robot’s mission. It also introduces safety-critical constraints, as the robot may need to adapt its behavior to avoid harmful interactions, maintain safe distances, and operate in a socially acceptable manner.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
+

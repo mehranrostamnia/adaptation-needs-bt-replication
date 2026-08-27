@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Author validation, questionnaire, and interview materials for the Adaptation Needs and Behavior Trees study.">
+  <title>Validation — Adaptation Needs &amp; Behavior Trees</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body data-page="validation">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="Replication package home"><span class="brand-mark" aria-hidden="true"></span><span>Adaptation × BTs</span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+        <a href="index.html" data-page="home">Overview</a>
+        <a href="methodology.html" data-page="methodology">Methodology</a>
+        <a href="artifacts.html" data-page="artifacts">Artifacts</a>
+        <a href="studies.html" data-page="studies">31 studies</a>
+        <a href="validation.html" data-page="validation">Validation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page" id="main">
+    <section class="page-hero">
+      <p class="eyebrow">Empirical validation</p>
+      <h1>Author checks, practitioner ratings, and expert interviews</h1>
+      <p class="lede">The study triangulates literature-driven classifications with targeted feedback from study authors and broader judgments from robotics and Behavior Tree researchers and practitioners.</p>
+    </section>
+
+    <section class="section">
+      <div class="stats">
+        <div class="stat"><strong>31</strong><span>author forms designed</span></div>
+        <div class="stat"><strong>13</strong><span>author responses received</span></div>
+        <div class="stat"><strong>41.9%</strong><span>author-response coverage</span></div>
+        <div class="stat"><strong>46</strong><span>questionnaire responses</span></div>
+        <div class="stat"><strong>6</strong><span>follow-up interviews</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="hypotheses">
+      <div class="section-heading">
+        <div><p class="eyebrow">Validation logic</p><h2>Six hypotheses connect evidence to the RQs</h2></div>
+        <p>H1–H3 are evaluated through author validation; H4–H6 through the questionnaire and semi-structured interviews.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Hypothesis</th><th>Claim</th><th>Evidence source</th><th>Primary RQ</th></tr></thead>
+          <tbody>
+            <tr><td><span class="study-id">H1</span></td><td>The mapping of primary studies to the four BT adaptation classes is consistent with the authors’ interpretation.</td><td>Author validation</td><td>RQ3</td></tr>
+            <tr><td><span class="study-id">H2</span></td><td>The limitations of classical BTs for adaptation are correctly identified in the scientific literature.</td><td>Author validation</td><td>RQ2</td></tr>
+            <tr><td><span class="study-id">H3</span></td><td>The mapping of primary studies to adaptation needs is consistent with the authors’ interpretation.</td><td>Author validation</td><td>RQ1 / RQ3</td></tr>
+            <tr><td><span class="study-id">H4</span></td><td>The classified adaptation needs are relevant in real robotic application scenarios.</td><td>Questionnaire + interviews</td><td>RQ1</td></tr>
+            <tr><td><span class="study-id">H5</span></td><td>The identified adaptation needs are effectively addressed using BTs.</td><td>Questionnaire + interviews</td><td>RQ2</td></tr>
+            <tr><td><span class="study-id">H6</span></td><td>Generation, extension, evolution, and refinement are suitable for at least some identified adaptation needs.</td><td>Questionnaire + interviews</td><td>RQ3</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="author-forms">
+      <div class="section-heading">
+        <div><p class="eyebrow">Author validation</p><h2>Customized instruments for all selected studies</h2></div>
+        <p>Each form presents the paper title, assigned BT class, extracted classical BT limitations, mapped adaptation needs, shared definitions, and open feedback questions.</p>
+      </div>
+      <article class="artifact-card interview-summary-card validation-responses-card">
+        <span class="status">13 anonymous responses</span>
+        <h3>Author-validation responses</h3>
+        <p>The workbook records the anonymous feedback received from 13 validation forms. Responses are identified only as P1–P13 and cover the extracted limitations, mapped adaptation needs, and BT technique classification.</p>
+        <a class="file-link" href="artifacts/data/author-validation-responses.xlsx">Download the response workbook</a>
+      </article>
+      <div class="artifact-grid" id="author-form-list"></div>
+    </section>
+
+    <section class="section" id="questionnaire">
+      <div class="section-heading">
+        <div><p class="eyebrow">Practitioner questionnaire</p><h2>Instrument structure and public data</h2></div>
+        <p>Data collection ran for four weeks in July 2026 and asked participants to judge needs, solution strategies, and the suitability of four BT enhancement classes.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <span class="rq-number">01</span>
+          <h3>Background</h3>
+          <p>Robotics and BT experience, relationship to BTs, organization types, application domains, and professional role.</p>
+        </article>
+        <article class="card">
+          <span class="rq-number">02</span>
+          <h3>Adaptation needs</h3>
+          <p>Relevance ratings for five grouped need families and judgments about whether adaptation belongs in classical BTs, extensions, updates, or external modules.</p>
+        </article>
+        <article class="card">
+          <span class="rq-number">03</span>
+          <h3>Technique suitability</h3>
+          <p>Separate ratings for BT generation, extension, evolution, and refinement across each adaptation-need family.</p>
+        </article>
+      </div>
+      <div class="hero-actions">
+        <a class="button" href="https://adaptation-needs-bt-replication.saviz-negar.chatgpt.site/replication/artifacts/questionnaire/questionnaire-form.pdf">Questionnaire PDF</a>
+        <a class="button secondary" href="artifacts/data/questionnaire-responses-consenting.csv">Questionnaire responses CSV</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid-2">
+        <article class="card">
+          <h3>Quantitative analysis rule</h3>
+          <p>Likert-scale responses are treated as ordinal data. Response distributions are reported, and “Insufficient expertise” is retained as a separate response rather than converted to a numeric value.</p>
+        </article>
+        <article class="card">
+          <h3>Qualitative interpretation rule</h3>
+          <p>Open answers are used to explain ratings, disagreements, ambiguous categories, missing needs, and cases where a technique is suitable only under specific assumptions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="interviews">
+      <div class="section-heading">
+        <div><p class="eyebrow">Semi-structured interviews</p><h2>Six follow-up conversations</h2></div>
+        <p>Interviewees were selected using self-declared expertise, the presence of critical or insightful questionnaire responses, and consent to follow up.</p>
+      </div>
+      <article class="artifact-card interview-summary-card">
+        <span class="status">Included</span>
+        <h3>Summary of the semi-structured interviews</h3>
+        <p>This is the interview material released with the package. It synthesizes cross-cutting findings, results by adaptation family and BT-based technique, and anonymized summaries for participants I1–I6.</p>
+        <a class="file-link" href="artifacts/interviews/interview-summary.md">Read or download the Markdown summary</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div><strong>Adaptation Needs in Robotic Systems: Behavior Trees and Beyond</strong><p>Replication package · GSSI · <span data-current-year>2026</span></p></div>
+      <div class="footer-links"><a href="artifacts.html">Artifacts</a><a href="studies.html">Selected studies</a><a href="README.md">README</a></div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this replication package, please cite this package and the associated paper."
+title: "Adaptation Needs in Robotic Systems: Behavior Trees and Beyond — Replication Package"
+type: dataset
+version: 1.0.0
+date-released: 2026-08-27
+authors:
+  - family-names: Rostamnia
+    given-names: Mehran
+  - family-names: Caldas
+    given-names: Ricardo
+  - family-names: Filippone
+    given-names: Gianluca
+  - family-names: Pelliccione
+    given-names: Patrizio
+repository-code: "https://github.com/mehranrostamnia/adaptation-needs-bt-replication"
+url: "https://mehranrostamnia.github.io/adaptation-needs-bt-replication/"
+abstract: "Research materials for a study of robotic adaptation needs, the capabilities and limitations of classical Behavior Trees, and approaches that generate, extend, evolve, or refine BTs."
+keywords:
+  - behavior trees
+  - robotics
+  - adaptation
+  - uncertainty
+  - replication package
