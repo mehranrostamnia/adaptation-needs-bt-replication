@@ -24,6 +24,11 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id],
+details[id] {
+  scroll-margin-top: 92px;
+}
+
 body {
   margin: 0;
   background:
@@ -203,6 +208,10 @@ h1 {
   font-weight: 500;
 }
 
+.hero h1 {
+  font-size: clamp(2.7rem, 4.8vw, 4.9rem);
+}
+
 .page-hero h1 {
   max-width: 940px;
   font-size: clamp(2.7rem, 5vw, 5rem);
@@ -365,6 +374,58 @@ h3 {
   padding: 92px 0 0;
 }
 
+.compact-section {
+  padding-top: 76px;
+}
+
+.methodology-figure {
+  margin: 0 0 28px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.methodology-figure a {
+  display: block;
+}
+
+.methodology-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.methodology-figure figcaption {
+  padding: 16px 20px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.artifact-map-table td:first-child {
+  width: 30%;
+}
+
+.artifact-map-table td:nth-child(2) {
+  width: 31%;
+}
+
+.download-list {
+  min-width: 290px;
+}
+
+.download-list a {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 760;
+}
+
+.download-list a:last-child {
+  margin-bottom: 0;
+}
+
 .section-heading {
   display: grid;
   grid-template-columns: minmax(0, 0.7fr) minmax(300px, 0.3fr);
@@ -511,6 +572,40 @@ h3 {
 
 .validation-responses-card {
   margin-bottom: 24px;
+}
+
+.file-link-stack {
+  display: flex;
+  margin-top: auto;
+  padding-top: 24px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.file-link-stack .file-link {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.forms-disclosure {
+  margin-top: 24px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 248, 0.82);
+}
+
+.forms-disclosure summary {
+  cursor: pointer;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.forms-disclosure > p {
+  margin: 12px 0 22px;
+  color: var(--ink-soft);
 }
 
 .status {

@@ -100,9 +100,17 @@ function setYear() {
   });
 }
 
+function revealLinkedDisclosure() {
+  const target = document.querySelector(window.location.hash);
+  if (target instanceof HTMLDetailsElement) target.open = true;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   setupNavigation();
   renderStudies();
   renderAuthorForms();
   setYear();
+  revealLinkedDisclosure();
 });
+
+window.addEventListener("hashchange", revealLinkedDisclosure);

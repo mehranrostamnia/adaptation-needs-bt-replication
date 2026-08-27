@@ -1,6 +1,6 @@
-# Adaptation Needs in Robotic Systems: Behavior Trees and Beyond
+# Adaptation Needs in Robotic Systems: Assessing Behavior Trees and Their Enhancements
 
-This repository is the replication package for the paper **“Adaptation Needs in Robotic Systems: Behavior Trees and Beyond.”** It brings together the literature-search material, extraction workbooks, technical synthesis, questionnaire instrument and responses, author-validation instruments, selected-study bibliography, and interview summary used by the study.
+This repository is the replication package for the paper **“Adaptation Needs in Robotic Systems: Assessing Behavior Trees and Their Enhancements.”** It brings together the literature-search material, extraction workbooks, technical synthesis, questionnaire instrument and responses, author-validation instruments, selected-study bibliography, methodology figure, and interview summary used by the study.
 
 Open `index.html` to browse the package as a website.
 
@@ -16,17 +16,18 @@ The research design has three cumulative cycles: adaptation-need identification,
 
 ## Repository contents
 
-- `index.html`, `methodology.html`, `artifacts.html`, `studies.html`, and `validation.html`: the replication-package website.
-- The manuscript PDF is available from the deployed replication-package website.
+- `index.html`: the single-page replication-package website. The four legacy page names redirect to the relevant section of this page.
+- `artifacts/paper/adaptation-needs-behavior-trees-paper.pdf`: the manuscript.
+- `artifacts/methodology/research-process.png`: the research-process figure linking the three cycles, contributions, and validation activities.
 - `artifacts/search/`: targeted search strings for RQ1.
 - `artifacts/data/rq-artifacts.xlsx`: definitions, evidence excerpts, reviewer notes, classical BT limitations, and study mappings.
 - `artifacts/data/synthesis.xlsx`: technical characterization of the selected primary studies.
 - `artifacts/data/questionnaire-responses-consenting.csv`: the 46 questionnaire records analyzed in the study.
 - `artifacts/data/author-validation-responses.xlsx`: 13 anonymous author-validation response records.
-- The complete questionnaire instrument is available from the deployed replication-package website.
+- `artifacts/questionnaire/questionnaire-form.pdf`: the complete questionnaire instrument.
 - `artifacts/author-validation/`: all 31 customized author-validation forms, plus their shared definitions and acknowledgement pages.
 - `artifacts/interviews/interview-summary.md`: the anonymized analytical summary of the six semi-structured interviews.
-- `studies.html` and `script.js`: Paper IDs, titles, DOI or publisher links, and mappings to the validation forms.
+- The selected-study table on `index.html` and `script.js`: Paper IDs, titles, DOI or publisher links, and mappings to the validation forms.
 
 ## Authors
 
