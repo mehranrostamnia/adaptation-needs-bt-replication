@@ -17,7 +17,6 @@ The research design has three cumulative cycles: adaptation-need identification,
 ## Repository contents
 
 - `index.html`: the single-page replication-package website. The four legacy page names redirect to the relevant section of this page.
-- `artifacts/paper/adaptation-needs-behavior-trees-paper.pdf`: the manuscript.
 - `artifacts/methodology/research-process.png`: the research-process figure linking the three cycles, contributions, and validation activities.
 - `artifacts/search/`: targeted search strings for RQ1.
 - `artifacts/data/rq-artifacts.xlsx`: definitions, evidence excerpts, reviewer notes, classical BT limitations, and study mappings.
