@@ -18,7 +18,7 @@ The research design has three cumulative cycles: adaptation-need identification,
 
 - `index.html`: the single-page replication-package website. The four legacy page names redirect to the relevant section of this page.
 - `artifacts/methodology/research-process.png`: the research-process figure linking the three cycles, contributions, and validation activities.
-- `artifacts/search/`: targeted search strings for RQ1.
+- `artifacts/search/`: targeted search strings for RQ1 and the 44-paper Scopus source list used to identify potential questionnaire invitees.
 - `artifacts/data/rq-artifacts.xlsx`: definitions, evidence excerpts, reviewer notes, classical BT limitations, and study mappings.
 - `artifacts/data/synthesis.xlsx`: technical characterization of the selected primary studies.
 - `artifacts/data/questionnaire-responses-consenting.csv`: the 46 questionnaire records analyzed in the study.
@@ -27,6 +27,8 @@ The research design has three cumulative cycles: adaptation-need identification,
 - `artifacts/author-validation/`: all 31 customized author-validation forms, plus their shared definitions and acknowledgement pages.
 - `artifacts/interviews/interview-summary.md`: the anonymized analytical summary of the six semi-structured interviews.
 - The selected-study table on `index.html` and `script.js`: Paper IDs, titles, and DOI or publisher links.
+
+The questionnaire recruitment search covered papers published from 2024 through June 2026 that mentioned Behavior Trees in their titles, abstracts, or keywords. The public source list contains publication titles, DOIs, and links. Email addresses used to contact potential participants are not included.
 
 ## Authors
 
