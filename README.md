@@ -26,7 +26,7 @@ The research design has three cumulative cycles: adaptation-need identification,
 - `artifacts/questionnaire/questionnaire-form.pdf`: the complete questionnaire instrument.
 - `artifacts/author-validation/`: all 31 customized author-validation forms, plus their shared definitions and acknowledgement pages.
 - `artifacts/interviews/interview-summary.md`: the anonymized analytical summary of the six semi-structured interviews.
-- The selected-study table on `index.html` and `script.js`: Paper IDs, titles, DOI or publisher links, and mappings to the validation forms.
+- The selected-study table on `index.html` and `script.js`: Paper IDs, titles, and DOI or publisher links.
 
 ## Authors
 

@@ -61,7 +61,6 @@ function renderStudies() {
   if (!target) return;
 
   target.innerHTML = studies.map((study, index) => {
-    const form = `<a href="artifacts/author-validation/${study.form}" target="_blank" rel="noopener">Open form</a>`;
     const doi = study.doi
       ? `<a href="https://doi.org/${study.doi}" target="_blank" rel="noopener">${study.doi}</a>`
       : `<a href="${study.source}" target="_blank" rel="noopener">Publisher record</a>`;
@@ -72,7 +71,6 @@ function renderStudies() {
         <td><span class="study-id">${study.id}</span></td>
         <td>${study.title}</td>
         <td>${doi}</td>
-        <td>${form}</td>
       </tr>`;
   }).join("");
 

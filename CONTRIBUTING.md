@@ -10,7 +10,7 @@
    { id: "Example2026", title: "Example paper", doi: "10.0000/example.2026.1", form: "Example2026.html" }
    ```
 
-4. Open `studies.html` and confirm that the title, DOI, and validation-form link render correctly.
+4. Open the selected-studies section and confirm that the title and DOI render correctly. Then confirm that the corresponding form remains available in the Validation section.
 
 Keep the Paper ID unchanged so it continues to match the extraction workbooks.
 
